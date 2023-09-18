@@ -5,14 +5,16 @@ function TemplateProcessor(template) {
 
 // Define the fillIn method on the TemplateProcessor prototype
 TemplateProcessor.prototype.fillIn = function (dictionary) {
+  
   // Use a regular expression to find and replace template placeholders
   return this.template.replace(/{{(.*?)}}/g, function (match, key) {
+    
     // Use the key to look up the corresponding value in the dictionary
     return dictionary.hasOwnProperty(key) ? dictionary[key] : '';
   });
 };
 
-// Example usage:
+// Example:
 var template = "My favorite month is {{month}} but not the day {{day}} or the year {{year}}.";
 var dataTemplate = new TemplateProcessor(template);
 
