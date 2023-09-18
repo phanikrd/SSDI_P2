@@ -1,6 +1,6 @@
 function MakeMultiFilter(originalArray) {
     // Initialize currentArray to be identical to originalArray
-    let currentArray = [...originalArray];
+    let currentArray = [originalArray];
   
     // Define the arrayFilterer function
     function arrayFilterer(filterCriteria, callback) {
